@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>الموقع التعريفي لبلدية محافظة البيضاء</title>
+    <link rel="icon" type="image/png" href="download.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="شعار البلدية" class="logo-img">
+        </a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">الصفحة الرئيسية</a>
+            <a href="al-bayda_Governorate.html" style="--i:1;">ملامح محافظة البيضاء</a>
+            <a href="al-bayda_Municipality.html" style="--i:2;">إنجازات بلدية محافظة البيضاء</a>
+            <a href="faq.html" style="--i:3;">الأسئلة الشائعة</a>
+            <a href="contact_Us.html" style="--i:4;">تواصل معنا</a>
+        </nav>
+
+    </header>
+
+
+    <section class="achievements-projects">
+    <div class="container">
+        <h2 class="section-main-title">أبرز مشاريعنا وإنجازاتنا</h2>
+        
+        <div class="projects-grid">
+            
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p1.jpg" alt="مشروع">
+                            <span class="status-badge">مكتمل</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>تطوير الطرق الرئيسية</h3>
+                            <p>تحسين وتطوير المحاور لرفع كفاءة الطرق بالمحافظة.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p1.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>تفاصيل المشروع</h3>
+                            <p>تم الانتهاء من سفلتة 20 كم طولي مع الإنارة.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p2.jpg" alt="مشروع">
+                            <span class="status-badge processing">قيد التنفيذ</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>إنشاء الحدائق العامة</h3>
+                            <p>توسعة المساحات الخضراء وتوفير مناطق ترفيهية.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p2.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>تفاصيل المشروع</h3>
+                            <p>يتم العمل حالياً على تركيب أنظمة الري الذكية.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p3.jpg" alt="مشروع">
+                            <span class="status-badge">مكتمل</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>مشروع الإنارة الذكية</h3>
+                            <p>إحلال أعمدة الإنارة بأنظمة LED لتوفير الطاقة.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p3.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>تركيب 1200 عمود إنارة جديد موفر للطاقة.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p4.jpg" alt="مشروع">
+                            <span class="status-badge processing">قيد التنفيذ</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>الممشى الرياضي</h3>
+                            <p>تجهيز ممشى رياضي بمواصفات عالمية لدعم جودة الحياة.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p4.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>المشروع يضم مسارات للمشاة والدراجات الهوائية.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p5.jpg" alt="مشروع">
+                            <span class="status-badge">مكتمل</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>سوق الحرفيين</h3>
+                            <p>ترميم وتجهيز سوق شعبي لدعم الأسر المنتجة.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p5.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>يحتوي السوق على 40 محلاً بتصاميم تراثية.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p6.jpg" alt="مشروع">
+                            <span class="status-badge processing">قيد التنفيذ</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>مبنى المركز الثقافي</h3>
+                            <p>إنشاء مركز ثقافي متكامل لاحتضان الفعاليات.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p6.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>يضم مسرحاً يتسع لـ 500 زائر وقاعات تدريب.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p7.jpg" alt="مشروع">
+                            <span class="status-badge">مكتمل</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>تجميل المداخل</h3>
+                            <p>تنفيذ جداريات ومجسمات جمالية تمثل الهوية.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p7.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>تم الانتهاء من 3 مجسمات كبرى في المداخل الرئيسية.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p8.jpg" alt="مشروع">
+                            <span class="status-badge processing">قيد التنفيذ</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>شبكة تصريف الأمطار</h3>
+                            <p>مشروع بنية تحتية لرفع كفاءة تصريف السيول.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p8.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>تمديد خطوط رئيسية بطول 15 كم في المناطق الحيوية.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p9.jpg" alt="مشروع">
+                            <span class="status-badge">مكتمل</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>الملاعب الرياضية</h3>
+                            <p>تجهيز ملاعب كرة قدم وألعاب قوى مفتوحة للشباب.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p9.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>افتتاح 4 ملاعب أحياء متكاملة بالخدمات.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card-inner">
+                    <div class="card-front">
+                        <div class="project-image">
+                            <img src="p10.jpg" alt="مشروع">
+                            <span class="status-badge processing">قيد التنفيذ</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>تطوير المنطقة المركزية</h3>
+                            <p>إعادة تنظيم وسط المحافظة ليكون صديقاً للمشاة.</p>
+                            <button class="project-btn flip-btn" onclick="flipCard(this)">تفاصيل المشروع</button>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('p10.jpg');">
+                        <div class="back-overlay"></div>
+                        <div class="back-content">
+                            <h3>التفاصيل</h3>
+                            <p>تحويل المسارات لساحات مشاة مع زراعة أشجار الظل.</p>
+                            <button class="project-btn back-flip-btn" onclick="unflipCard(this)">العودة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-main-title">تحول محافظة البيضاء (قبل وبعد)</h2>
+        
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('pic2.png');"></div>
+                        <div class="img-before" style="background-image: url('pic3.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">تطوير الميدان الرئيسي</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after2.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before2.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">حديقة حي الشروق</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after3.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before3.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">تطوير كورنيش البيضاء</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after4.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before4.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">إنارة طريق المطار</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after5.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before5.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">تحسين مداخل المحافظة</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after6.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before6.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">سوق الحرف القديم</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after7.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before7.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">تأهيل المناطق التراثية</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after8.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before8.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">ممشى البلدية الرياضي</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after9.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before9.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">تشجير الأحياء السكنية</p>
+                </div>
+
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="img-after" style="background-image: url('after10.jpg');"></div>
+                        <div class="img-before" style="background-image: url('before10.jpg');"></div>
+                        <div class="slider-line"><div class="slider-button">↔</div></div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="moveSlider(this)">
+                    </div>
+                    <p class="comparison-label">مواقف البلدية الذكية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

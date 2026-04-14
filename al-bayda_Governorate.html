@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>الموقع التعريفي لبلدية محافظة البيضاء</title>
+    <link rel="icon" type="image/png" href="download.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="شعار البلدية" class="logo-img">
+        </a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">الصفحة الرئيسية</a>
+            <a href="al-bayda_Governorate.html" style="--i:1;">ملامح محافظة البيضاء</a>
+            <a href="al-bayda_Municipality.html" style="--i:2;">إنجازات بلدية محافظة البيضاء</a>
+            <a href="faq.html" style="--i:3;">الأسئلة الشائعة</a>
+            <a href="contact_Us.html" style="--i:4;">تواصل معنا</a>
+        </nav>
+
+    </header>
+
+
+    <section class="container">
+    <div class="line"></div>
+
+    <div class="content">
+        <h2>محافظة البيضاء</h2>
+        <p>
+           محافظة البيضاء هي إحدى المحافظات المستحدثة في المنطقة الشرقية 
+           بالمملكة العربية السعودية، حيث صدر قرار إنشائها عام 2022 م ضمن جهود تطوير 
+           التقسيمات الإدارية. تتميز بطابعها الحضري الحديث، إذ تضم العديد من الأحياء 
+           السكنية المتنامية والمخططات العمرانية الجديدة. كما تشهد المحافظة تطورًا 
+           ملحوظًا في البنية التحتية والخدمات، ما يجعلها بيئة مناسبة للاستثمار والسكن. 
+           وتُعد جزءًا من التوسع العمراني الكبير الذي تشهده المنطقة الشرقية، 
+           بما يسهم في دعم التنمية الاقتصادية وتحسين جودة الحياة.
+        </p>
+    </div>
+    </section>
+
+
+    <section class="location-section">
+        <div class="location-container">
+        
+            <div class="location-header">
+                <span class="map-pin-mini">📍</span>
+                <h2 class="location-title">الموقع الجغرافي</h2>
+            </div>
+
+            <div class="location-description">
+                <p>
+                تقع محافظة البيضاء في قلب المنطقة الشرقية، وتعد جزءاً حيوياً من النسيج الجغرافي للمنطقة، 
+                حيث ترتبط بشبكة طرق استراتيجية تربطها بكافة مدن ومحافظات الشرقية.
+                </p>
+            </div>
+
+            <div class="map-wrapper" id="mapWrapper">
+                <div class="map-controls">
+                    <button type="button" onclick="toggleFullScreen()" title="ملء الشاشة">⛶</button>
+                    <button type="button" onclick="zoomInMap()" title="تكبير">+</button>
+                    <button type="button" onclick="zoomOutMap()" title="تصغير">−</button>
+                </div>
+                <div id="interactiveMap" style="height: 450px; width: 100%;"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery-section">
+        <div class="slider-container">
+            <h2 class="gallery-title">معرض صور محافظة البيضاء</h2>
+        
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="gallery1.png" alt="بلدية محافظة البيضاء">
+                    <div class="slide-caption">مبنى بلدية محافظة البيضاء</div>
+                </div>
+                <div class="slide fade">
+                    <img src="gallery2.jpg" alt="مجمع لابيازا">
+                    <div class="slide-caption">مجمع لابيازا</div>
+                </div>
+                <div class="slide fade">
+                    <img src="gallery3.jpg" alt="ممشى الفرسان">
+                    <div class="slide-caption">ممشى الفرسان</div>
+                </div>
+                <div class="slide fade">
+                    <img src="gallery4.jpg" alt="حديقة أجدان">
+                    <div class="slide-caption">حديقة أجدان</div>
+                </div>
+                <div class="slide fade">
+                    <img src="gallery5.jpg" alt="ممشى العبير">
+                    <div class="slide-caption">ممشى العبير</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

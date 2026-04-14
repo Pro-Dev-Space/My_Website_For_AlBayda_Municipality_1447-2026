@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>الموقع التعريفي لبلدية محافظة البيضاء</title>
+    <link rel="icon" type="image/png" href="download.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="شعار البلدية" class="logo-img">
+        </a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">الصفحة الرئيسية</a>
+            <a href="al-bayda_Governorate.html" style="--i:1;">ملامح محافظة البيضاء</a>
+            <a href="al-bayda_Municipality.html" style="--i:2;">إنجازات بلدية محافظة البيضاء</a>
+            <a href="faq.html" style="--i:3;">الأسئلة الشائعة</a>
+            <a href="contact_Us.html" style="--i:4;">تواصل معنا</a>
+        </nav>
+
+    </header>
+
+
+    <section class="statistics-container">
+
+        <div class="stat-card">
+            <div class="icon">🏗️</div>
+            <h2 class="counter" data-target="145">0</h2>
+            <p>مشروعاً تطويرياً</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🌳</div>
+            <h2 class="counter" data-target="38">0</h2>
+            <p>حديقة ومنتزه</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">💡</div>
+            <h2 class="counter" data-target="25">0</h2>
+            <p>مبادرة رقمية</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🛣️</div>
+            <h2 class="counter" data-target="1200">0</h2>
+            <p>الطرق المعبدة</p>
+        </div>
+
+    </section>
+
+
+    <section class="location-section">
+        <h2 class="section-title">محافظة البيضاء: الموقع والحدود</h2>
+    
+        <div class="map-container">
+            <img src="location.jpeg" alt="خريطة حدود محافظة البيضاء" class="map-image">
+        </div>
+    </section>
+
+
+    <main>
+        
+        
+
+    </main>
+
+
+    <script>
+
+    function runCounter() {
+        const counters = document.querySelectorAll('.counter');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50;   // سرعة العداد
+
+            const animate = () => {
+                if (current < target) {
+                    current += increment;
+                    counter.innerText = Math.ceil(current);
+                    setTimeout(animate, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            animate();
+        });
+    }
+
+    window.addEventListener('load', runCounter);   // تشغيل العداد فور تحميل الصفحة
+
+</script>
+
+    
+</body>
+
+</html>
