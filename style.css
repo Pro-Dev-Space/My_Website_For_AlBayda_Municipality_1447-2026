@@ -901,11 +901,17 @@ body {
     direction: rtl;
 }
 
-/* توسيط النموذج رقم 10 في الصف الأخير (لأن المجموع 10) */
-@media (min-width: 993px) {
-    .comparison-item:last-child:nth-child(3n+1) {
-        grid-column: 2;
-    }
+/* السطر المسؤول عن وضع العنصر الأخير في الوسط */
+.comparison-item:last-child {
+    grid-column: 1 / -1; /* يجعله يمتد على عرض الشبكة كاملاً */
+    display: flex;
+    justify-content: center; /* يوسط المحتوى داخله */
+}
+
+/* لضمان أن السلايدر داخل العنصر الأخير لا يفرش على كامل الشاشة ويحافظ على حجمه */
+.comparison-item:last-child .comparison-slider {
+    width: 100%;
+    max-width: 360px; /* أو نفس العرض اللي تستخدمينه للبقية */
 }
 
 @media (max-width: 768px) {
