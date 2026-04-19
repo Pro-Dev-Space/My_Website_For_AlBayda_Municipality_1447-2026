@@ -901,20 +901,6 @@ body {
     direction: rtl;
 }
 
-@media (min-width: 993px) {
-    
-    .comparison-item:last-child {
-        grid-column: 1 / -1; /* ياخذ عرض الصف كامل */
-        display: flex;
-        justify-content: center; /* توسيط أفقي */
-    }
-
-    .comparison-item:last-child .comparison-slider {
-        max-width: 360px; /* نفس حجم البطاقات */
-        width: 100%;
-    }
-}
-
 @media (max-width: 768px) {
     .comparison-slider {
         width: 100%;       /* بدل 400px */
@@ -926,6 +912,17 @@ body {
 .comparison-grid {
         gap: 20px;
         padding: 0;
+}
+
+@media (min-width: 993px) {
+
+    .comparison-item:last-child {
+        grid-column: span 3; /* ياخذ 3 أعمدة */
+        justify-self: center; /* يتوسط */
+        max-width: 350px; /* نفس حجم الكروت */
+        width: 100%;
+    }
+
 }
 
 /* حل مخصص فقط لأجهزة الآيفون (iOS) لضمان ظهور المباني التراثية بدون "زوم" */
