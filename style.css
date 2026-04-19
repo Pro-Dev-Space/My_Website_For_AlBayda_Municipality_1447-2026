@@ -901,29 +901,17 @@ body {
     direction: rtl;
 }
 
-/* حل توسيط العنصر العاشر وضبط الإطار الداخلي - بشاير */
-
 @media (min-width: 993px) {
-    /* 1. استهداف العنصر العاشر (البطاقة الشفافة) وضعه في المنتصف */
+    
     .comparison-item:last-child {
-        /* إخبار العنصر أن يبدأ من العمود الثاني */
-        grid-column-start: 2; 
-        
-        /* ضمان توسيط البطاقة الشفافة نفسها */
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; /* تأكدي أن البطاقة الشفافة لها عرض كامل */
+        grid-column: 1 / -1; /* ياخذ عرض الصف كامل */
+        display: flex;
+        justify-content: center; /* توسيط أفقي */
     }
 
-    /* 2. التعديل السحري: توسيط الإطار الداخلي داخل البطاقة */
-    /* بما أن "مواقف البلدية الذكية" لسه يسار، لازم نوسط الإطار */
     .comparison-item:last-child .comparison-slider {
-        /* إجبار الإطار الأخضر على التوسط داخل البطاقة الشفافة */
-        margin-left: auto !important;
-        margin-right: auto !important;
-        
-        /* عرض مناسب ليتناسق مع اللي فوق، مثلاً: */
-        max-width: 360px; /* أو نفس عرض البطاقات اللي فوق */
+        max-width: 360px; /* نفس حجم البطاقات */
+        width: 100%;
     }
 }
 
