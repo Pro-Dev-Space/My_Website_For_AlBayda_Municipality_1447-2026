@@ -915,14 +915,28 @@ body {
         padding: 0;
 }
 
-/* حل خاص بأجهزة iPhone / iOS */
+/* حل مخصص فقط لأجهزة الآيفون (iOS) لضمان ظهور المباني التراثية بدون "زوم" */
 @supports (-webkit-touch-callout: none) {
-    
-    .hero-section {
+
+    body {
+        /* نلغي الخلفية من البودي في الآيفون فقط لأننا سنضعها في طبقة خلفية ثابتة */
+        background-image: none !important;
+        background-color: #6b4e45; 
+    }
+
+    body::before {
+        content: "";
+        position: fixed; /* لتثبيت الخلفية بشكل سليم في متصفح سفاري */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url("background.png");
+        /* وضعية الارتكاز من الأسفل لإظهار المباني التراثية */
+        background-position: center bottom !important;
         background-size: cover;
-        background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: scroll;
     }
 
 }
