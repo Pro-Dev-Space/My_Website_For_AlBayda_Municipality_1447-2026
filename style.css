@@ -901,17 +901,30 @@ body {
     direction: rtl;
 }
 
-/* السطر المسؤول عن وضع العنصر الأخير في الوسط */
-.comparison-item:last-child {
-    grid-column: 1 / -1; /* يجعله يمتد على عرض الشبكة كاملاً */
-    display: flex;
-    justify-content: center; /* يوسط المحتوى داخله */
-}
+/* حل توسيط العنصر العاشر وضبط الإطار الداخلي - بشاير */
 
-/* لضمان أن السلايدر داخل العنصر الأخير لا يفرش على كامل الشاشة ويحافظ على حجمه */
-.comparison-item:last-child .comparison-slider {
-    width: 100%;
-    max-width: 360px; /* أو نفس العرض اللي تستخدمينه للبقية */
+@media (min-width: 993px) {
+    /* 1. استهداف العنصر العاشر (البطاقة الشفافة) وضعه في المنتصف */
+    .comparison-item:last-child {
+        /* إخبار العنصر أن يبدأ من العمود الثاني */
+        grid-column-start: 2; 
+        
+        /* ضمان توسيط البطاقة الشفافة نفسها */
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; /* تأكدي أن البطاقة الشفافة لها عرض كامل */
+    }
+
+    /* 2. التعديل السحري: توسيط الإطار الداخلي داخل البطاقة */
+    /* بما أن "مواقف البلدية الذكية" لسه يسار، لازم نوسط الإطار */
+    .comparison-item:last-child .comparison-slider {
+        /* إجبار الإطار الأخضر على التوسط داخل البطاقة الشفافة */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        /* عرض مناسب ليتناسق مع اللي فوق، مثلاً: */
+        max-width: 360px; /* أو نفس عرض البطاقات اللي فوق */
+    }
 }
 
 @media (max-width: 768px) {
